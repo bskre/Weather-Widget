@@ -1,0 +1,99 @@
+:root   {
+    --background-color: #b2d6eb;
+    --city-button-color: #29cc34;
+    --city-button-target-color: #34fa42;
+    --city-button-click-color: #1b7a22;
+    --text-heat-color: #d17a17;
+    --text-cool-color: #d3eb00;
+    --text-cold-color: #0202fa;
+    --text-in-button-color: #fa1977;
+    --search-background-color: #08101c;
+    --search-color: #0f2340;
+
+    --city-button-width: 150px; 
+    --city-button-height: 45px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.city-button   {
+    width: var(--city-button-width);
+    height: var(--city-button-height);
+    background-color: var(--city-button-color);
+    box-shadow: var(--shadow-md);
+    color: var(--text-in-button-color);
+    transform: translateY(-2px)
+}
+
+.city-button:hover  {
+    background-color: var(--city-button-target-color);
+}
+
+.city-button:active {
+    background-color: var(--city-button-click-color);
+}
+
+.city-button-grid   {
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    justify-content: center;
+    align-content: center;
+}
+
+body  {
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.search {
+    width: 1000px;
+    margin-left: 25%;
+    min-height: calc(100vh - 80px); 
+    margin-top: 50px;
+    background-color: var(--search-background-color);
+    border-radius: 20px 20px 0px 0px; 
+    padding-bottom: 100px;
+    margin-bottom: -10px;
+}
+
+ input {
+    text-align: left;
+    border-radius: 20px 0px 0px 20px; 
+    width: 500px;
+    background-color: var(--search-color);
+    margin-top: 20px;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.time {
+    background-color: var(--search-color);
+    border-radius: 0px 20px 20px 0px;
+    width: 150px;
+}
+
+.weather{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.weather .hot   {
+    color: var(--text-heat-color)
+}
+
+.weather .cool{
+    color: var(--text-cool-color)
+}
+
+.weather .cold  {
+    color:var(--text-cold-color)
+}
